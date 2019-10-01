@@ -15,20 +15,20 @@ public class Author extends Person {
     /**
      * @deprecated Use publishedBooks instead
      */
-    @Deprecated
+    @SuppressWarnings("all")
     public List<String> getBooks() {
         return books;
     }
-
+    @SuppressWarnings("all")
     public List<String> publishedBooks() {
         return books;
     }
-
+    @SuppressWarnings("all")
     public void addBook(String book) {
         books.add(book);
     }
 
-    @Override
+    @Deprecated
     public String sortName() {
         return String.format("%s, %s", lastName, firstName);
     }
